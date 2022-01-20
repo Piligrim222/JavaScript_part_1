@@ -1,0 +1,51 @@
+<script>
+	const a = +prompt("Введите первое число:", Math.floor(Math.random() * 16));
+	const b = +prompt("Введите второе число:", Math.floor(Math.random() * 16));
+	const c = prompt("Введите оператор (plus, minus, mult, divis):", "plus");
+
+	function plus(a, b) {
+		return `a + b = ${a} + ${b} = ${a + b}`
+	}
+
+	function minus(a, b) {
+		if (b < 0) {
+			return `a - b = ${a} + ${b * (-1)} = ${a - b}`
+		} else {
+			return `a - b = ${a} - ${b} = ${a - b}`
+		}
+	}
+
+	function mult(a, b) {
+		return `a * b = ${a} * ${b} = ${a * b}`
+	}
+
+	function divis(a, b) {
+		if (b !== 0) {
+			return `a / b = ${a} / ${b} = ${a / b}`
+		} else {
+			return 'всё ок'
+		}
+	}
+
+	function mathOperation(arg1, arg2, operation) {
+		switch (c) {
+			case 'plus':
+				return (plus(arg1, arg2));
+				break;
+			case 'minus':
+				return (minus(arg1, arg2));
+				break;
+			case 'mult':
+				return (mult(arg1, arg2));
+				break;
+			case 'divis':
+				return (divis(arg1, arg2));
+				break;
+			default:
+				return ('всё ок');
+		}
+	}
+
+	alert(mathOperation(a, b, c));
+
+</script>

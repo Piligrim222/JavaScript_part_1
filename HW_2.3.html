@@ -1,0 +1,16 @@
+<script>
+	const a = Math.floor(Math.random() * 546) - 273;
+	const b = Math.floor(Math.random() * 546) - 273;
+	if (a >= 0 && b >= 0) {
+		alert(`${a} - ${b} = ${a - b}`);
+	} else if (a < 0 && b < 0) {
+		alert(`${a} * ${b} = ${a * b}`);
+	} else {
+		if (b < 0) {
+			alert(`${a} - ${b * (-1)} = ${a + b}`)
+		} else {
+			alert(`${a} + ${b} = ${a + b}`)
+		}
+
+	}	
+</script>
