@@ -1,0 +1,18 @@
+<script>
+    var cart = []
+
+    function countBasketPrice(cart) {
+        let summa = 0;
+        for (i = 0; i < cart.length; i++) {
+            summa += cart[i][2] * cart[i][3]
+        }
+        return summa
+    }
+
+    cart.push(['мяч', 001, 799, 6]);
+    cart.push(['штанга', 003, 1799, 6]);
+    cart.push(['гвозди', 002, 0.05, 1]);
+    cart.push(['кроссовки', 017, 37990, 2]);
+
+    console.log(countBasketPrice(cart))
+</script>
