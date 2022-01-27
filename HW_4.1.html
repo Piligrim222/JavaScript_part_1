@@ -1,0 +1,12 @@
+<script>
+    let parsNumb = {};
+    let numb = prompt('Введите число от 0 до бесконечности: ');
+    if (+numb <= 999 && +numb >= 0) {
+        parsNumb['единицы'] = numb[2];
+        parsNumb['десятки'] = numb[1];
+        parsNumb['сотни'] = numb[0];
+        console.log(parsNumb);
+    } else {
+        console.log(parsNumb);
+    }
+</script>
